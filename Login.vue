@@ -4,7 +4,6 @@
             <form @submit.prevent="submit">
                 <h1 class="h3 mb-3 fw-normal" />
 
-                <div v-if="!tokenRequired" class="form-floating">
                     <input id="floatingInput" v-model="username" type="text" class="form-control" placeholder="Username">
                     <label for="floatingInput">{{ $t("Username") }}</label>
                 </div>
@@ -31,7 +30,6 @@
                     </div>
                 </div>
                 <button class="w-100 btn btn-primary" type="submit" :disabled="processing">
-                    {{ $t("Login") }}
                 </button>
 
                 <div v-if="res && !res.ok" class="alert alert-danger mt-3" role="alert">
